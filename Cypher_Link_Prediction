@@ -1,0 +1,35 @@
+//01. Configuración de parámetros
+
+// Configuación de nodos y relaciones desde archivos
+
+:param nodo_Usuarios_Flickr: 'file:///nodes.csv',
+nodo_Grupos_Flickr: 'file:///groups.csv',
+RELACION_usuarios_grupos: 'file:///group_edges.csv',
+RELACION_usuarios_usuarios: 'file:///edges_Pruebav3.csv',
+
+// configuración de nombres de proyectos y nodos
+nombre_proyeccion: 'projeccion_link_predict_Flirck_experimento_1',
+nodos_proyeccion:['Usuario','Grupo'],
+
+//Configuración de nombre del pipe y parámetros
+nombre_pipe: 'pipe_link_predict_Flirck_experimento_1',
+test: 0.2,
+train: 0.6,
+folds: 6,
+negativeSamRatio: 2.0,
+
+//Configuro el algoritmo RandomForest y sus parámetros
+numerodearboles: 50,
+maxdepth: 4,
+criterion: "ENTROPY",
+
+//Configuro la vectorización
+metodoEmbedding: "FastRP",
+dimensiones: 32,
+seed: 123,
+walkLength: 8,
+
+// seteo para correr el modelo
+nombreModelo: "arbol_modelo_experimento1",
+targetRelationship: 'SIGUEN',
+Seed2: 122
